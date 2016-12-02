@@ -2,6 +2,7 @@ package app.rojoyazul.com.android_app_project_new_begening;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.firebase.client.DataSnapshot;
@@ -18,14 +19,28 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView mText;
     Firebase rootRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/");
     ArrayList <Level> array_levels = new ArrayList<Level>();
+    Button mBtnLevel1, mBtnLevel2, mBtnLevel3, mBtnLevel4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mText = (TextView) findViewById(R.id.textviewPrueba);
+
+        /**** buscar botones por id ******/
+        mBtnLevel1 = (Button) findViewById(R.id.btnLevel1);
+        mBtnLevel2 = (Button) findViewById(R.id.btnLevel2);
+        mBtnLevel3 = (Button) findViewById(R.id.btnLevel3);
+        mBtnLevel4 = (Button) findViewById(R.id.btnLevel4);
+        /*******************************/
+
+        /************ establecer titulo de los botones ****************
+        mBtnLevel1.setText(array_levels.get(0).getTitle());
+        mBtnLevel2.setText(array_levels.get(1).getTitle());
+        mBtnLevel3.setText(array_levels.get(2).getTitle());
+        mBtnLevel4.setText(array_levels.get(3).getTitle());
+        /*************************************************************/
+
     }//fin del metodo
 
     @Override
@@ -53,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
                                 (Integer.valueOf(o1.code) < Integer.valueOf(o2.code))?-1:0;
                     }
                 });
-
-
+                mBtnLevel1.setText(array_levels.get(0).getTitle());
+                mBtnLevel2.setText(" "+array_levels.size());
             }//fin del metodo
 
             @Override
