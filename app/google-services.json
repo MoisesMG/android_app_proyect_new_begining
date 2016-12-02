@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "168352640107",
+    "firebase_url": "https://androidappprojectnewbegening.firebaseio.com",
+    "project_id": "androidappprojectnewbegening",
+    "storage_bucket": "androidappprojectnewbegening.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168352640107:android:6cf4184c9803a406",
+        "android_client_info": {
+          "package_name": "app.rojoyazul.com.android_app_project_new_begening"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168352640107-69a0o276ijgtaotkia0jtjhj767ne8mc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.rojoyazul.com.android_app_project_new_begening",
+            "certificate_hash": "AA3ADEB2CBBDBBDE15346FD2967421E827B6D1F0"
+          }
+        },
+        {
+          "client_id": "168352640107-6252mqk0qgo3ev4ft2googv78jr8v3b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168352640107-6252mqk0qgo3ev4ft2googv78jr8v3b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
