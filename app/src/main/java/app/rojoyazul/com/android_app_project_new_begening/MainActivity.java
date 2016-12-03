@@ -41,15 +41,12 @@ public class MainActivity extends AppCompatActivity {
         mBtnLevel4.setText(array_levels.get(3).getTitle());
         /*************************************************************/
 
-    }//fin del metodo
 
-    @Override
-    protected void onStart() {
-        super.onStart();
         Firebase levelsRef = rootRef.child("levels");
         levelsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                array_levels.clear();
                 Map <String, Map<String,String> >levels = dataSnapshot.getValue(Map.class);
                 Iterator it_levels = levels.keySet().iterator();
                 while (it_levels.hasNext()){
@@ -69,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 mBtnLevel1.setText(array_levels.get(0).getTitle());
-                mBtnLevel2.setText(" "+array_levels.size());
+                mBtnLevel2.setText(array_levels.get(1).getTitle());
+                mBtnLevel3.setText(array_levels.get(2).getTitle());
+                mBtnLevel4.setText(array_levels.get(3).getTitle());
             }//fin del metodo
 
             @Override
@@ -77,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
 
             }//fin del metodo
         });
+
+    }//fin del metodo
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
     }//fin del metodo
 
     public void BubbleSort(){
