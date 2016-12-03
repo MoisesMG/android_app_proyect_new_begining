@@ -84,16 +84,4 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
     }//fin del metodo
-
-    public void BubbleSort(){
-        for(int i=0; i<array_levels.size(); i ++){
-            for(int j = 0; j<array_levels.size() - 1; i++){
-                if(Integer.valueOf(array_levels.get(j).code) > Integer.valueOf(array_levels.get(j+1).code)){
-                    Level temp = array_levels.get(j);
-                    array_levels.set(j,array_levels.get(j+1));
-                    array_levels.set(j + 1, temp);
-                }//fin de if
-            }//fin de for
-        }//fin de for
-    }//fin del metodo
 }//(fin de la clase
