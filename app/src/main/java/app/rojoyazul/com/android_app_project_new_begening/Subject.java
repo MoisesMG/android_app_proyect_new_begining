@@ -4,19 +4,19 @@ package app.rojoyazul.com.android_app_project_new_begening;
  * Created by Moises on 03/12/2016.
  */
 
-public class Subjects {
+public class Subject {
     private String code;
     private String level_code;
     private String Title;
 
     //contructores
-    public Subjects(String code, String level_code, String title) {
+    public Subject(String code, String level_code, String title) {
         this.code = code;
         this.level_code = level_code;
         Title = title;
     }
 
-    public Subjects() {
+    public Subject() {
     }
 
     //getter and setters

@@ -19,6 +19,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <TextView
+                android:text="Selecciona un nivel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/levelSelectionTitle" />
+
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"

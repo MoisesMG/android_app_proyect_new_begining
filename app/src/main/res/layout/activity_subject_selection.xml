@@ -10,4 +10,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.SubjectSelection">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Seleccione una materia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/subjectSelecttionTitle" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSubject1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSubject2" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSubject3" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSubject4" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
