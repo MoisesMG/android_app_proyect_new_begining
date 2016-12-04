@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SubjectSelection"></activity>
+        <activity android:name=".LessonSelectionActivity"></activity>
     </application>
 
 </manifest>

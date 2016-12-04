@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class LessonSelectionActivity extends AppCompatActivity {
 
-    Firebase lessonsRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/lessons");
+    Firebase lessonsRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/lessonAux");
     ArrayList<Lesson> array_lessons = new ArrayList<Lesson>();
     TextView mLessonSelectionTitle;
     Button mBtnLesson1, mBtnLesson2, mBtnLesson3, mBtnLesson4;
@@ -39,6 +39,7 @@ public class LessonSelectionActivity extends AppCompatActivity {
         /*** recuperar codigo enviado de la actividad anterior: SubjectSelection.java **/
         Bundle recieved = getIntent().getExtras();
         subjectCode = recieved.getString("code");
+        mBtnLesson1.setText(subjectCode);
         
         /*******************************************************************************/
 
@@ -46,7 +47,7 @@ public class LessonSelectionActivity extends AppCompatActivity {
         lessonsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
+                Map<String, Map<String, String>> mapLessons = dataSnapshot.getValue(Map.class);
             }//fin del metodo
 
             @Override
