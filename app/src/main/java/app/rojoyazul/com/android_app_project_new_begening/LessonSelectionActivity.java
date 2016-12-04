@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class LessonSelectionActivity extends AppCompatActivity {
 
-    Firebase lessonsRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/lessons");
+    Firebase lessonsRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/lessonAux");
     ArrayList<Lesson> array_lessons = new ArrayList<Lesson>();
     TextView mLessonSelectionTitle;
     Button mBtnLesson1, mBtnLesson2, mBtnLesson3, mBtnLesson4;
@@ -46,7 +46,34 @@ public class LessonSelectionActivity extends AppCompatActivity {
         lessonsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                array_lessons.clear();
+                Map<String, Map<String, String>> mapLessons = dataSnapshot.getValue(Map.class);
+                Iterator it = mapLessons.keySet().iterator();
+                while(it.hasNext()){
+                    String key = (String) it.next();
+                    Map<String, String> features = mapLessons.get(key);
+                    Lesson tempLesson = new Lesson();
+                    tempLesson.setCode(features.get("code"));
+                    tempLesson.setTitle(features.get("title"));
+                    tempLesson.setSubject_code(features.get("scode"));
+                    tempLesson.setContent(features.get("cont"));
+                    if(tempLesson.getSubject_code().equals(subjectCode)){
+                        array_lessons.add(tempLesson);
+                    }
+                }//fin de while
 
+                //ordenar el array
+                Collections.sort(array_lessons, new Comparator<Lesson>() {
+                    @Override
+                    public int compare(Lesson o1, Lesson o2) {
+                        return Integer.valueOf(o1.getCode()) > Integer.valueOf(o2.getCode()) ? 1:
+                                Integer.valueOf(o1.getCode()) < Integer.valueOf(o2.getCode())? -1: 0;
+                    }
+                });
+                mBtnLesson1.setText(array_lessons.get(0).getTitle() + " " + array_lessons.get(0).getCode());
+                mBtnLesson2.setText(array_lessons.get(1).getTitle() + " " + array_lessons.get(1).getCode());
+                mBtnLesson3.setText(array_lessons.get(2).getTitle() + " " + array_lessons.get(2).getCode());
+                mBtnLesson4.setText(array_lessons.get(3).getTitle() + " " + array_lessons.get(3).getCode());
             }//fin del metodo
 
             @Override

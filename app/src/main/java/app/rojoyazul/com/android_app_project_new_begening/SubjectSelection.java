@@ -1,7 +1,9 @@
 package app.rojoyazul.com.android_app_project_new_begening;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.firebase.client.DataSnapshot;
@@ -79,8 +81,50 @@ public class SubjectSelection extends AppCompatActivity {
         });
         /******************************************************/
 
-        /***** agreagando titulo a los botones ****************/
+        /***************++ eventos onClick ******************/
+        mBtnSubject1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SubjectSelection.this, LessonSelectionActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("code", array_subjects.get(0).getCode());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
 
-        /******************************************************/
+        mBtnSubject2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SubjectSelection.this, LessonSelectionActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("code", array_subjects.get(1).getCode());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+
+        mBtnSubject3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SubjectSelection.this, LessonSelectionActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("code", array_subjects.get(2).getCode());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+
+        mBtnSubject4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SubjectSelection.this, LessonSelectionActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("code", array_subjects.get(3).getCode());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+        /**************************************************/
     }//fin del metodo
 }//fin de la clase
