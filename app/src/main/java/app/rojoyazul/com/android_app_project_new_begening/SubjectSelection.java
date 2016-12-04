@@ -92,6 +92,39 @@ public class SubjectSelection extends AppCompatActivity {
                 startActivityForResult(i, 1);
             }
         });
+
+        mBtnSubject2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SubjectSelection.this, LessonSelectionActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("code", array_subjects.get(1).getCode());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+
+        mBtnSubject3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SubjectSelection.this, LessonSelectionActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("code", array_subjects.get(2).getCode());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+
+        mBtnSubject4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SubjectSelection.this, LessonSelectionActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("code", array_subjects.get(3).getCode());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
         /**************************************************/
     }//fin del metodo
 }//fin de la clase
