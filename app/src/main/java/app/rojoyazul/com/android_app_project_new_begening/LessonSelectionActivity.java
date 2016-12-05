@@ -1,7 +1,9 @@
 package app.rojoyazul.com.android_app_project_new_begening;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -83,5 +85,55 @@ public class LessonSelectionActivity extends AppCompatActivity {
 
         });
         /************************************************/
-    }//fin del metodo
+
+        /********++ eventos OnClick *******************/
+        mBtnLesson1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LessonSelectionActivity.this, LessonContentActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("title", array_lessons.get(0).getTitle());
+                toSend.putString("cont", array_lessons.get(0).getContent());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+
+        mBtnLesson2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LessonSelectionActivity.this, LessonContentActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("title", array_lessons.get(1).getTitle());
+                toSend.putString("cont", array_lessons.get(1).getContent());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+
+        mBtnLesson3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LessonSelectionActivity.this, LessonContentActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("title", array_lessons.get(2).getTitle());
+                toSend.putString("cont", array_lessons.get(2).getContent());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+
+        mBtnLesson4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LessonSelectionActivity.this, LessonContentActivity.class);
+                Bundle toSend = new Bundle();
+                toSend.putString("title", array_lessons.get(3).getTitle());
+                toSend.putString("cont", array_lessons.get(3).getContent());
+                i.putExtras(toSend);
+                startActivityForResult(i, 1);
+            }
+        });
+        /********************************************/
+    }//fin del metodo OnCreate
 }//fin de la clase
