@@ -18,8 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SubjectSelection"></activity>
-        <activity android:name=".LessonSelectionActivity"></activity>
+        <activity android:name=".SubjectSelection" />
+        <activity android:name=".LessonSelectionActivity" />
+        <activity android:name=".LessonContentActivity"></activity>
     </application>
 
 </manifest>
