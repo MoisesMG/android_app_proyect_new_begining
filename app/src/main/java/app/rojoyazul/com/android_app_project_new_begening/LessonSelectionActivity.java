@@ -123,7 +123,7 @@ public class LessonSelectionActivity extends AppCompatActivity {
             }
         });
 
-        mBtnLesson1.setOnClickListener(new View.OnClickListener() {
+        mBtnLesson4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LessonSelectionActivity.this, LessonContentActivity.class);
