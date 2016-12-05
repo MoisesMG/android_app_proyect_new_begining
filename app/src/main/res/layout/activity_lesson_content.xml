@@ -10,4 +10,89 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.LessonContentActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" />
+            <!--primer video tutorial -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view1"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="8dp"
+                card_view:cardBackgroundColor="@color/colorAccent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/caption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/caption_view"
+                        android:scaleType="centerCrop"/>
+                    <TextView
+                        android:id="@+id/cardtitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Titulo de video"
+                        android:textSize="24sp"
+                        android:paddingTop="24dp"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:layout_below="@+id/caption1"/>
+
+                    <TextView
+                        android:id="@+id/description1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="videoDescription"
+                        android:textSize="14sp"
+                        android:paddingBottom="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:layout_below="@+id/cardtitle1"
+                        />
+
+                    <Button
+                        android:id="@+id/goVideo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorAccent"
+                        android:text="ver_video"
+                        android:layout_below="@+id/description1"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
