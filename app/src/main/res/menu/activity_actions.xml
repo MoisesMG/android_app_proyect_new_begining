@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_credits"
+        yourapp:showAsAction="never"
+        android:title="@string/acerca_de_la_aplicaci_n" />
+
+    <item android:id="@+id/action_suggestion"
+        android:title="@string/sugerencias"
+        yourapp:showAsAction="never" />
+</menu>
