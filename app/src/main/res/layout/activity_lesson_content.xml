@@ -23,13 +23,13 @@
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewLessonDescrip" />
+                android:id="@+id/textViewLessonTitle" />
 
             <TextView
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewLessonTitle" />
+                android:id="@+id/textViewLessonDescrip" />
             <!--primer video tutorial -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
