@@ -1,6 +1,7 @@
 package app.rojoyazul.com.android_app_project_new_begening;
 
 import android.app.Application;
+import android.view.MenuInflater;
 
 import com.firebase.client.Firebase;
 
@@ -9,6 +10,7 @@ import com.firebase.client.Firebase;
  */
 
 public class InicioFirebase extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();
