@@ -1,6 +1,7 @@
 package app.rojoyazul.com.android_app_project_new_begening;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +15,9 @@ import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
+import com.github.ksoichiro.android.observablescrollview.ScrollState;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,7 +26,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
 
-public class SubjectSelection extends AppCompatActivity {
+public class SubjectSelection extends AppCompatActivity implements ObservableScrollViewCallbacks{
 
     Firebase subjectsRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/subjects");
     private ArrayList<Subject> array_subjects = new ArrayList<Subject>();
@@ -33,6 +37,8 @@ public class SubjectSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject_selection);
 
+        ObservableScrollView scrollView = (ObservableScrollView) findViewById(R.id.activity_subject_selection);
+        scrollView.setScrollViewCallbacks(this);
         /** establecer icono en el action bar**/
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.ic_launcher1);
@@ -150,14 +156,43 @@ public class SubjectSelection extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_credits:
-                Toast.makeText(getApplicationContext(), "se presiono el boton de creditos", Toast.LENGTH_SHORT);
+                Intent i = new Intent(SubjectSelection.this, CreditsActivity.class);
+                startActivity(i);
                 return true;
 
             case R.id.action_suggestion:
-                Toast.makeText(getApplicationContext(), "se presiono el boton de sugerencias", Toast.LENGTH_LONG);
+                Intent in = new Intent(SubjectSelection.this, SuggestionsActivity.class);
+                startActivity(in);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }//fin del metodo
+
+    @Override
+    public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+
+    }
+
+    @Override
+    public void onDownMotionEvent() {
+
+    }
+
+    @Override
+    public void onUpOrCancelMotionEvent(ScrollState scrollState) {
+        ActionBar ab = getSupportActionBar();
+        if (ab == null) {
+            return;
+        }
+        if (scrollState == ScrollState.UP) {
+            if (ab.isShowing()) {
+                ab.hide();
+            }
+        } else if (scrollState == ScrollState.DOWN) {
+            if (!ab.isShowing()) {
+                ab.show();
+            }
         }
     }//fin del metodo
 }//fin de la clase

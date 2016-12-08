@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.github.ksoichiro.android.observablescrollview.ObservableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_lesson_content"
     android:layout_width="match_parent"
@@ -7,8 +8,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
     android:background="@color/colorPrimaryDark"
+    android:fillViewport="true"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.LessonContentActivity">
 
     <ScrollView
@@ -108,7 +110,7 @@
                         android:background="@color/colorAccent"
                         android:textSize="14sp"
                         android:textColor="@color/colorPrimary"
-                        android:text="Ver video tutorial"
+                        android:text="@string/ver_video_tutorial"
                         android:layout_below="@+id/description1"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
@@ -171,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@color/colorAccent"
-                        android:text="ver_video"
+                        android:text="@string/ver_video_tutorial"
                         android:layout_below="@+id/description2"
                         android:textSize="14sp"
                         android:textColor="@color/colorPrimary"
@@ -236,7 +238,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@color/colorAccent"
-                        android:text="ver_video"
+                        android:text="@string/ver_video_tutorial"
                         android:layout_below="@+id/description3"
                         android:textSize="14sp"
                         android:textColor="@color/colorPrimary"
@@ -301,10 +303,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@color/colorAccent"
-                        android:text="ver_video"
+                        android:text="@string/ver_video_tutorial"
                         android:layout_below="@+id/description4"
                         android:textSize="14sp"
-                        android:textColor="@color/colorTextCards"
+                        android:textColor="@color/colorPrimary"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
                         android:paddingLeft="16dp"
@@ -327,4 +329,4 @@
                 />
         </LinearLayout>
     </ScrollView>
-</RelativeLayout>
+</com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
