@@ -9,13 +9,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_horizontal_margin"
     android:background="@color/colorPrimaryDark"
+    android:fillViewport="true"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.MainActivity">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark"
+            >
 
             <TextView
                 android:text="@string/selecciona_un_nivel"
