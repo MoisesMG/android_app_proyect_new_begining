@@ -34,6 +34,12 @@ public class LessonSelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson_selection);
 
+        /** establecer icono en el action bar**/
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_launcher1);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        /****************************/
+
         /************ buscar por id ***********/
         mLessonSelectionTitle = (TextView) findViewById(R.id.lessonSelectionTitle);
         mBtnLesson1 = (Button) findViewById(R.id.btnLesson1);

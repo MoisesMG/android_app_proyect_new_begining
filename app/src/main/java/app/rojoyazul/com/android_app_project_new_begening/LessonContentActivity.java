@@ -16,6 +16,12 @@ public class LessonContentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson_content);
 
+        /** establecer icono en el action bar**/
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_launcher1);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        /****************************/
+
         /*******++ buscar por id **********/
         mLessonTitle = (TextView) findViewById(R.id.textViewLessonTitle);
         mLessonDescrip = (TextView) findViewById(R.id.textViewLessonDescrip);

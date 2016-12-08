@@ -33,6 +33,12 @@ public class SubjectSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject_selection);
 
+        /** establecer icono en el action bar**/
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_launcher1);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        /****************************/
+
         /************+ buscar por id *****************/
         mBtnSubject1 = (Button) findViewById(R.id.btnSubject1);
         mBtnSubject2 = (Button) findViewById(R.id.btnSubject2);

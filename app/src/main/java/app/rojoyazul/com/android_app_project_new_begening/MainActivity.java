@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /** establecer icono en el action bar**/
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_launcher1);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        /**************************************/
+
         /**** buscar botones por id ******/
         mBtnLevel1 = (Button) findViewById(R.id.btnLevel1);
         mBtnLevel2 = (Button) findViewById(R.id.btnLevel2);
