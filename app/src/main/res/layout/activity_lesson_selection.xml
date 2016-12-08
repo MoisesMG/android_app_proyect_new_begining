@@ -20,33 +20,56 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="TextView"
+                android:text="@string/selecciona_una_lecci_n"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lessonSelectionTitle" />
+                android:id="@+id/lessonSelectionTitle"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:theme="@style/titles"/>
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson1" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson2" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson3" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson4" />
 
         </LinearLayout>
