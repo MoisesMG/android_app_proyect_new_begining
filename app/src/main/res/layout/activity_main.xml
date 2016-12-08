@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.github.ksoichiro.android.observablescrollview.ObservableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -7,18 +7,21 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
     android:background="@color/colorPrimaryDark"
+    android:fillViewport="true"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark"
+            >
 
             <TextView
                 android:text="@string/selecciona_un_nivel"
@@ -74,4 +77,4 @@
                 android:id="@+id/btnLevel4" />
         </LinearLayout>
     </ScrollView>
-</RelativeLayout>
+</com.github.ksoichiro.android.observablescrollview.ObservableScrollView>

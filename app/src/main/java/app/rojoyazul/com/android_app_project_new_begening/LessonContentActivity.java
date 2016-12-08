@@ -1,14 +1,21 @@
 package app.rojoyazul.com.android_app_project_new_begening;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LessonContentActivity extends AppCompatActivity {
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
+import com.github.ksoichiro.android.observablescrollview.ScrollState;
+
+public class LessonContentActivity extends AppCompatActivity implements ObservableScrollViewCallbacks {
     TextView mLessonTitle;
     TextView mLessonDescrip;
     @Override
@@ -16,6 +23,8 @@ public class LessonContentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson_content);
 
+        ObservableScrollView scrollView = (ObservableScrollView) findViewById(R.id.activity_lesson_content);
+        scrollView.setScrollViewCallbacks(this);
         /** establecer icono en el action bar**/
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.ic_launcher1);
@@ -52,6 +61,33 @@ public class LessonContentActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }//fin del metodo
+
+    @Override
+    public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+
+    }
+
+    @Override
+    public void onDownMotionEvent() {
+
+    }
+
+    @Override
+    public void onUpOrCancelMotionEvent(ScrollState scrollState) {
+        ActionBar ab = getSupportActionBar();
+        if (ab == null) {
+            return;
+        }
+        if (scrollState == ScrollState.UP) {
+            if (ab.isShowing()) {
+                ab.hide();
+            }
+        } else if (scrollState == ScrollState.DOWN) {
+            if (!ab.isShowing()) {
+                ab.show();
+            }
         }
     }//fin del metodo
 }//fin de la clase
