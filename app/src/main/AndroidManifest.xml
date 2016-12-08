@@ -18,26 +18,39 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SubjectSelection"
+        <activity
+            android:name=".SubjectSelection"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".LessonSelectionActivity"
+            android:parentActivityName=".SubjectSelection">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SubjectSelection" />
+        </activity>
+        <activity
+            android:name=".LessonContentActivity"
+            android:parentActivityName=".LessonSelectionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LessonSelectionActivity" />
+        </activity>
+        <activity android:name=".CreditsActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
 
-        <activity android:name=".LessonSelectionActivity"
-            android:parentActivityName=".SubjectSelection">
+        <activity android:name=".SuggestionsActivity"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SubjectSelection"/>
-        </activity>
-
-        <activity android:name=".LessonContentActivity"
-            android:parentActivityName=".LessonSelectionActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LessonSelectionActivity"/>
+                android:value=".MainActivity"/>
         </activity>
     </application>
 
