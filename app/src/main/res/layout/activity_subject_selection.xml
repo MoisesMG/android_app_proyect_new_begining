@@ -21,33 +21,56 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="Seleccione una materia"
+                android:text="@string/seleccione_una_materia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/subjectSelecttionTitle" />
+                android:id="@+id/subjectSelecttionTitle"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:theme="@style/titles"/>
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="62.5dp"
+                android:layout_marginLeft="62.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject1" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="62.5dp"
+                android:layout_marginLeft="62.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject2" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="62.5dp"
+                android:layout_marginLeft="62.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject3" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="62.5dp"
+                android:layout_marginLeft="62.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject4" />
         </LinearLayout>
     </ScrollView>
