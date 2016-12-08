@@ -77,4 +77,5 @@
                 android:id="@+id/btnLevel4" />
         </LinearLayout>
     </ScrollView>
+
 </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
