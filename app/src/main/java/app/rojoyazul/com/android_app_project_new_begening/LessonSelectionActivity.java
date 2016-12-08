@@ -164,11 +164,13 @@ public class LessonSelectionActivity extends AppCompatActivity implements Observ
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_credits:
-                Toast.makeText(getApplicationContext(), "se presiono el boton de creditos", Toast.LENGTH_SHORT);
+                Intent i = new Intent(LessonSelectionActivity.this, CreditsActivity.class);
+                startActivity(i);
                 return true;
 
             case R.id.action_suggestion:
-                Toast.makeText(getApplicationContext(), "se presiono el boton de sugerencias", Toast.LENGTH_LONG);
+                Intent in = new Intent(LessonSelectionActivity.this, SuggestionsActivity.class);
+                startActivity(in);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

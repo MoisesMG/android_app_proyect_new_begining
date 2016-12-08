@@ -39,8 +39,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LessonSelectionActivity" />
         </activity>
-        <activity android:name=".CreditsActivity" />
-        <activity android:name=".SuggestionsActivity"></activity>
+        <activity android:name=".CreditsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".SuggestionsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
