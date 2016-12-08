@@ -12,6 +12,9 @@
     android:fillViewport="true"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,5 +76,5 @@
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel4" />
         </LinearLayout>
-
+    </ScrollView>
 </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
