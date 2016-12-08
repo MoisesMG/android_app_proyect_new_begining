@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:yourapp="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/pruba"
-        android:title="de prueba"
-        android:icon="@drawable/ic_help_white_24dp"
-        />
 
     <item android:id="@+id/action_credits"
         android:icon="@drawable/ic_code_white_24dp"
