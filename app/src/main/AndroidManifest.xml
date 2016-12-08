@@ -7,7 +7,7 @@
     <application
         android:name=".InicioFirebase"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher1"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -18,9 +18,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SubjectSelection" />
-        <activity android:name=".LessonSelectionActivity" />
-        <activity android:name=".LessonContentActivity"></activity>
+
+        <activity android:name=".SubjectSelection"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".LessonSelectionActivity"
+            android:parentActivityName=".SubjectSelection">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SubjectSelection"/>
+        </activity>
+
+        <activity android:name=".LessonContentActivity"
+            android:parentActivityName=".LessonSelectionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LessonSelectionActivity"/>
+        </activity>
     </application>
 
 </manifest>

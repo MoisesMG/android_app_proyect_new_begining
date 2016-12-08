@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Android_app_project_new_begening</string>
+    <string name="app_name">InfoManos</string>
+    <string name="acerca_de_la_aplicaci_n">Acerca de la aplicación</string>
+    <string name="sugerencias">Sugerencias</string>
 </resources>
