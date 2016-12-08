@@ -3,9 +3,13 @@ package app.rojoyazul.com.android_app_project_new_begening;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -136,4 +140,25 @@ public class LessonSelectionActivity extends AppCompatActivity {
         });
         /********************************************/
     }//fin del metodo OnCreate
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }//fin del metodo
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_credits:
+                Toast.makeText(getApplicationContext(), "se presiono el boton de creditos", Toast.LENGTH_SHORT);
+                return true;
+
+            case R.id.action_suggestion:
+                Toast.makeText(getApplicationContext(), "se presiono el boton de sugerencias", Toast.LENGTH_LONG);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }//fin del metodo
 }//fin de la clase

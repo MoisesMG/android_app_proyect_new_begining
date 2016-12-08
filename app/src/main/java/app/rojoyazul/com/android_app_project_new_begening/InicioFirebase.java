@@ -16,5 +16,7 @@ public class InicioFirebase extends Application {
         super.onCreate();
         Firebase.setAndroidContext(this);
         Firebase.getDefaultConfig().setPersistenceEnabled(true);
+
+
     }//fin del metodo
 }//fin de la clase
