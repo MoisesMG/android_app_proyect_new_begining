@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryDark"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.MainActivity">
 
     <ScrollView
@@ -20,33 +21,56 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="Selecciona un nivel"
+                android:text="@string/selecciona_un_nivel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/levelSelectionTitle" />
+                android:id="@+id/levelSelectionTitle"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:theme="@style/titles"/>
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel1" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel2" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel3" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel4" />
         </LinearLayout>
     </ScrollView>

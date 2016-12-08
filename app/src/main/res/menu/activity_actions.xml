@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_credits"
+        android:icon="@drawable/ic_code_white_24dp"
+        android:title="@string/acerca_de_la_aplicaci_n"
+        yourapp:showAsAction="always"
+        />
+
+    <item android:id="@+id/action_suggestion"
+        android:title="@string/sugerencias"
+        android:icon="@drawable/ic_supervisor_account_white_24dp"
+        yourapp:showAsAction="always"/>
+</menu>

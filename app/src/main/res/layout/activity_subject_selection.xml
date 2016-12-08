@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryDark"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.SubjectSelection">
 
     <ScrollView
@@ -20,33 +21,56 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="Seleccione una materia"
+                android:text="@string/seleccione_una_materia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/subjectSelecttionTitle" />
+                android:id="@+id/subjectSelecttionTitle"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:theme="@style/titles"/>
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject1" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject2" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject3" />
 
             <Button
                 android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/btnSubject4" />
         </LinearLayout>
     </ScrollView>

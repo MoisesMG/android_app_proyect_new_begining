@@ -6,6 +6,40 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
     </style>
 
+    <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/ActionBarTitleTextStle</item>
+        <item name="background">@color/colorPrimary</item>
+        <item name="height">56dp</item>
+
+    </style>
+
+    <style name="ActionBarTitleTextStle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <!-- estilo para los titulos de las pantallas -->
+    <style name="titles">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <!-- ************************** -->
+
+    <!-- estilo para la descripcion de las lecciones -->
+    <style name="descriptions">
+        <item name="android:lineSpacingExtra">10sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- ****************************************** -->
+
+    <!-- estilo para los botones -->
+    <style name="buttons" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- ************************* -->
 </resources>

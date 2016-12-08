@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryDark"
     tools:context="app.rojoyazul.com.android_app_project_new_begening.LessonContentActivity">
 
     <ScrollView
@@ -23,13 +24,35 @@
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewLessonDescrip" />
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:theme="@style/titles"
+                android:id="@+id/textViewLessonTitle" />
 
             <TextView
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewLessonTitle" />
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="12.5dp"
+                android:layout_marginRight="12.5dp"
+                android:theme="@style/descriptions"
+                android:id="@+id/textViewLessonDescrip" />
+
+            <Button
+                android:id="@+id/btnEjercicios1"
+                android:text="@string/realizar_ejercicios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                />
+
             <!--primer video tutorial -->
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -39,7 +62,7 @@
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                card_view:cardCornerRadius="4dp"
+                card_view:cardCornerRadius="8dp"
                 card_view:cardElevation="8dp"
                 card_view:cardBackgroundColor="@color/colorAccent">
 
@@ -57,6 +80,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Titulo de video"
+                        android:textColor="@color/colorTextCards"
                         android:textSize="24sp"
                         android:paddingTop="24dp"
                         android:paddingBottom="16dp"
@@ -69,6 +93,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="videoDescription"
+                        android:textColor="@color/colorTextCards"
                         android:textSize="14sp"
                         android:paddingBottom="16dp"
                         android:paddingRight="16dp"
@@ -81,14 +106,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@color/colorAccent"
-                        android:text="ver_video"
-                        android:layout_below="@+id/description1"
                         android:textSize="14sp"
                         android:textColor="@color/colorPrimary"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
+                        android:text="Ver video tutorial"
+                        android:layout_below="@+id/description1"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -102,7 +127,7 @@
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                card_view:cardCornerRadius="4dp"
+                card_view:cardCornerRadius="8dp"
                 card_view:cardElevation="8dp"
                 card_view:cardBackgroundColor="@color/colorAccent">
 
@@ -120,6 +145,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Titulo de video"
+                        android:textColor="@color/colorTextCards"
                         android:textSize="24sp"
                         android:paddingTop="24dp"
                         android:paddingBottom="16dp"
@@ -132,6 +158,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="videoDescription"
+                        android:textColor="@color/colorTextCards"
                         android:textSize="14sp"
                         android:paddingBottom="16dp"
                         android:paddingRight="16dp"
@@ -148,10 +175,10 @@
                         android:layout_below="@+id/description2"
                         android:textSize="14sp"
                         android:textColor="@color/colorPrimary"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -165,7 +192,7 @@
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                card_view:cardCornerRadius="4dp"
+                card_view:cardCornerRadius="8dp"
                 card_view:cardElevation="8dp"
                 card_view:cardBackgroundColor="@color/colorAccent">
 
@@ -183,6 +210,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Titulo de video"
+                        android:textColor="@color/colorTextCards"
                         android:textSize="24sp"
                         android:paddingTop="24dp"
                         android:paddingBottom="16dp"
@@ -196,6 +224,7 @@
                         android:layout_height="wrap_content"
                         android:text="videoDescription"
                         android:textSize="14sp"
+                        android:textColor="@color/colorTextCards"
                         android:paddingBottom="16dp"
                         android:paddingRight="16dp"
                         android:paddingLeft="16dp"
@@ -211,10 +240,10 @@
                         android:layout_below="@+id/description3"
                         android:textSize="14sp"
                         android:textColor="@color/colorPrimary"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -228,7 +257,7 @@
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                card_view:cardCornerRadius="4dp"
+                card_view:cardCornerRadius="8dp"
                 card_view:cardElevation="8dp"
                 card_view:cardBackgroundColor="@color/colorAccent">
 
@@ -247,6 +276,7 @@
                         android:layout_height="wrap_content"
                         android:text="Titulo de video"
                         android:textSize="24sp"
+                        android:textColor="@color/colorTextCards"
                         android:paddingTop="24dp"
                         android:paddingBottom="16dp"
                         android:paddingLeft="16dp"
@@ -259,6 +289,7 @@
                         android:layout_height="wrap_content"
                         android:text="videoDescription"
                         android:textSize="14sp"
+                        android:textColor="@color/colorTextCards"
                         android:paddingBottom="16dp"
                         android:paddingRight="16dp"
                         android:paddingLeft="16dp"
@@ -273,17 +304,27 @@
                         android:text="ver_video"
                         android:layout_below="@+id/description4"
                         android:textSize="14sp"
-                        android:textColor="@color/colorPrimary"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
+                        android:textColor="@color/colorTextCards"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
-
-
+            <Button
+                android:id="@+id/btnEjercicios2"
+                android:text="@string/realizar_ejercicios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/buttons"
+                android:background="@color/colorButtom"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
