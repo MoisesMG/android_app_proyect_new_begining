@@ -34,8 +34,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson1" />
 
@@ -45,8 +45,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson2" />
 
@@ -56,8 +56,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson3" />
 
@@ -67,8 +67,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLesson4" />
 

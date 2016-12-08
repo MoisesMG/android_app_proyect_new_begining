@@ -35,8 +35,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel1" />
 
@@ -46,8 +46,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel2" />
 
@@ -57,8 +57,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel3" />
 
@@ -68,8 +68,8 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/buttons"
                 android:background="@color/colorButtom"
-                android:layout_marginRight="62.5dp"
-                android:layout_marginLeft="62.5dp"
+                android:layout_marginRight="32.5dp"
+                android:layout_marginLeft="32.5dp"
                 android:layout_marginBottom="30dp"
                 android:id="@+id/btnLevel4" />
         </LinearLayout>

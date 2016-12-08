@@ -30,7 +30,7 @@
 
     <!-- estilo para la descripcion de las lecciones -->
     <style name="descriptions">
-        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:lineSpacingExtra">10sp</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">14sp</item>
     </style>
