@@ -1,6 +1,7 @@
 package app.rojoyazul.com.android_app_project_new_begening;
 
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
+import com.stephentuso.welcome.WelcomeHelper;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,10 +35,15 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
     Firebase rootRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/");
     ArrayList <Level> array_levels = new ArrayList<Level>();
     Button mBtnLevel1, mBtnLevel2, mBtnLevel3, mBtnLevel4;
+    WelcomeHelper welcomeHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*** definir instacia del WelcomeHelper ***/
+        welcomeHelper = new WelcomeHelper(this, MyWelcomeActivity.class);
+        welcomeHelper.show(savedInstanceState);
+        /*********************************************************/
 
         ObservableScrollView scrollView = (ObservableScrollView) findViewById(R.id.activity_main);
         scrollView.setScrollViewCallbacks(this);
@@ -201,4 +208,10 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
             }
         }
     }//fin del metodo
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        welcomeHelper.onSaveInstanceState(outState);
+    }///fin del metodo
 }//(fin de la clase

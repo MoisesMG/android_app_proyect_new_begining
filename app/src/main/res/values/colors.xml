@@ -5,4 +5,7 @@
     <color name="colorAccent">#fff</color>
     <color name="colorButtom">#fa1f1b</color>
     <color name="colorTextCards">#000</color>
+    <color name="background_welcome1">#0c5252</color>
+    <color name="background_welcome2">#008c83</color>
+    <color name="background_wlcome3">#fa1f1b</color>
 </resources>
