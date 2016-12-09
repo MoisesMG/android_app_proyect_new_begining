@@ -15,11 +15,12 @@ import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
 
+import java.util.Iterator;
 import java.util.Map;
 
 public class CreditsActivity extends AppCompatActivity implements ObservableScrollViewCallbacks{
     Firebase creditsRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/credits");
-    TextView creditsTitle, creditsRead, goals, thanks;
+    TextView mCreditsTitle, mCreditsRead, mGoals, mThanks;
     SimpleDraweeView logoTeam;
     Uri logoTeamUrlImage;
     @Override
@@ -34,10 +35,10 @@ public class CreditsActivity extends AppCompatActivity implements ObservableScro
         /************************************************/
 
         /*** buscar por id ****/
-        creditsTitle = (TextView) findViewById(R.id.creditsTitle);
-        creditsRead = (TextView) findViewById(R.id.creditsRead);
-        goals = (TextView) findViewById(R.id.goals);
-        thanks = (TextView) findViewById(R.id.thanks);
+        mCreditsTitle = (TextView) findViewById(R.id.creditsTitle);
+        mCreditsRead = (TextView) findViewById(R.id.creditsRead);
+        mGoals = (TextView) findViewById(R.id.goals);
+        mThanks = (TextView) findViewById(R.id.thanks);
         logoTeam = (SimpleDraweeView) findViewById(R.id.logoTeam);
         /***********************/
 
@@ -53,7 +54,19 @@ public class CreditsActivity extends AppCompatActivity implements ObservableScro
         creditsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-            Map<String, String> mapValues = dataSnapshot.getValue(Map.class);
+                String title, read, goal, thanks;
+                Map<String, String> mapValues = dataSnapshot.getValue(Map.class);
+                title = mapValues.get("title");
+                read = mapValues.get("credits_read");
+                goal = mapValues.get("goals");
+                thanks = mapValues.get("thanks");
+                logoTeamUrlImage = Uri.parse(mapValues.get("logoteam"));
+
+                mCreditsTitle.setText(title);
+                mCreditsRead.setText(read);
+                mGoals.setText(goal);
+                mThanks.setText(thanks);
+                logoTeam.setImageURI(logoTeamUrlImage);
             }//fin del metodo
 
             @Override
