@@ -56,29 +56,6 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
             }
         });
 
-        mBtnGoVideo2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
-                startActivity(in);
-            }
-        });
-
-        mBtnGoVideo3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
-                startActivity(in);
-            }
-        });
-
-        mBtnGoVideo4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
-                startActivity(in);
-            }
-        });
         /****************************************/
     }//fin del metodo
 
