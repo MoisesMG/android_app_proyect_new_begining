@@ -46,7 +46,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher1"
+                    app:srcCompat="@drawable/logoteam"
                     android:id="@+id/imageView_teamLogo"
                     android:layout_weight="1" />
             </LinearLayout>
