@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
         });
 
         /****************++ navegacion entre actividades *******************/
+        //TODO cambiar starActivityForResult a starActivity()
         mBtnLevel1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
