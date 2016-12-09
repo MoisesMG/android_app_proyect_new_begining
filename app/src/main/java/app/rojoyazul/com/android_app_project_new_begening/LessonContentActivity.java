@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +20,7 @@ import com.github.ksoichiro.android.observablescrollview.ScrollState;
 public class LessonContentActivity extends AppCompatActivity implements ObservableScrollViewCallbacks {
     TextView mLessonTitle;
     TextView mLessonDescrip;
+    Button mBtnGoVideo1, mBtnGoVideo2, mBtnGoVideo3, mBtnGoVideo4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +38,26 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
         /*******++ buscar por id **********/
         mLessonTitle = (TextView) findViewById(R.id.textViewLessonTitle);
         mLessonDescrip = (TextView) findViewById(R.id.textViewLessonDescrip);
+        mBtnGoVideo1 = (Button) findViewById(R.id.goVideo1);
         /*************************************/
 
         /*****+++ recuperar datos enviados de LessonSelectionActivity.java ***/
         Bundle recieved = getIntent().getExtras();
         mLessonTitle.setText(recieved.getString("title"));
         mLessonDescrip.setText(recieved.getString("cont"));
+        /**********************************************************/
+
+        /*********+ eventos onClick ***************/
+        mBtnGoVideo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
+                startActivity(in);
+            }
+        });
+
+        //TODO agregar los eventos a los demas botones
+        /****************************************/
     }//fin del metodo
 
     public boolean onCreateOptionsMenu(Menu menu) {
