@@ -24,7 +24,7 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
     TextView mLessonDescrip;
     Button mBtnGoVideo1, mBtnGoVideo2, mBtnGoVideo3, mBtnGoVideo4;
     Uri uri1, uri2, uri3, uri4;
-    SimpleDraweeView caption1;
+    SimpleDraweeView caption1, caption2, caption3, caption4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +35,17 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
 
         /********+ establecer images del DrawelView de Fresco API ***/
         caption1 = (SimpleDraweeView) findViewById(R.id.caption1);
+        caption2 = (SimpleDraweeView) findViewById(R.id.caption2);
+        caption3 = (SimpleDraweeView) findViewById(R.id.caption3);
+        caption4 = (SimpleDraweeView) findViewById(R.id.caption4);
+        uri1 = Uri.parse("https://firebasestorage.googleapis.com/v0/b/androidappprojectnewbegening.appspot.com/o/caption%20tutoriales%20materia%201.png?alt=media&token=64fb8a1e-f434-493b-a751-ff9a2e94f223");
+        uri2 = Uri.parse("https://firebasestorage.googleapis.com/v0/b/androidappprojectnewbegening.appspot.com/o/caption%20tutoriales%20materia%202.png?alt=media&token=d735d1d3-ea15-4d44-b7e7-4ded6a8981de");
+        uri3 = Uri.parse("https://firebasestorage.googleapis.com/v0/b/androidappprojectnewbegening.appspot.com/o/caption%20tutoriales%20materia%203.png?alt=media&token=d64e5022-06ad-4921-9f3b-7bf38ac34140");
+        uri4 = Uri.parse("https://firebasestorage.googleapis.com/v0/b/androidappprojectnewbegening.appspot.com/o/caption%20tutoriales%20materia%204.png?alt=media&token=47cbe231-d374-4856-b0a1-8399745a65f4");
         caption1.setImageURI(uri1);
+        caption2.setImageURI(uri2);
+        caption3.setImageURI(uri3);
+        caption4.setImageURI(uri4);
         /**********************************************************/
         /** establecer icono en el action bar**/
         getSupportActionBar().setDisplayShowHomeEnabled(true);

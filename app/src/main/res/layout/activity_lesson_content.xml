@@ -139,12 +139,15 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/caption2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/caption_view"
-                        android:scaleType="centerCrop"/>
+                        android:layout_height="150dp"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/caption_conectate_a_internet"
+                        />
+
                     <TextView
                         android:id="@+id/cardtitle2"
                         android:layout_width="match_parent"
@@ -204,12 +207,15 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/caption3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/caption_view"
-                        android:scaleType="centerCrop"/>
+                        android:layout_height="150dp"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/caption_conectate_a_internet"
+                        />
+
                     <TextView
                         android:id="@+id/cardtitle3"
                         android:layout_width="match_parent"
@@ -269,12 +275,16 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/caption4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/caption_view"
-                        android:scaleType="centerCrop"/>
+                        android:layout_height="150dp"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/caption_conectate_a_internet"
+                        />
+
                     <TextView
                         android:id="@+id/cardtitle4"
                         android:layout_width="match_parent"

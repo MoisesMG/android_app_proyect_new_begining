@@ -13,5 +13,6 @@
         android:id="@+id/videoView"
         android:layout_weight="1"
         android:focusable="false"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:foregroundGravity="center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill" />
 </LinearLayout>
