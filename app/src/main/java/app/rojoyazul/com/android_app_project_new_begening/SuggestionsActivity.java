@@ -46,9 +46,24 @@ public class SuggestionsActivity extends AppCompatActivity implements Observable
             @Override
             public void onClick(View v) {
                 Firebase suggestRef = rootRef.child("suggestions");
+                Suggestion yourSuggest = new Suggestion();
+                yourSuggest.setName(String.valueOf(mName.getText()));
+                yourSuggest.setEmail(String.valueOf(mEmail.getText()));
+                yourSuggest.setSuggest(String.valueOf(mSuggestion.getText()));
+                suggestRef.push().setValue(yourSuggest);
+            }//fin del metodo
+        });
+
+        mBtnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mName.setText("");
+                mEmail.setText("");
+                mEmail.setText("");
             }//fin del metodo
         });
         /***************************************************/
+
     }//fin del metodo
 
     @Override
