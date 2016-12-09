@@ -3,6 +3,7 @@ package app.rojoyazul.com.android_app_project_new_begening;
 import android.app.Application;
 import android.view.MenuInflater;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firebase.client.Firebase;
 
 /**
@@ -16,7 +17,7 @@ public class InicioFirebase extends Application {
         super.onCreate();
         Firebase.setAndroidContext(this);
         Firebase.getDefaultConfig().setPersistenceEnabled(true);
-
+        Fresco.initialize(this);
 
     }//fin del metodo
 }//fin de la clase

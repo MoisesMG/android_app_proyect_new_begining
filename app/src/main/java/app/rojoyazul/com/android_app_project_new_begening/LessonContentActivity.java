@@ -1,6 +1,7 @@
 package app.rojoyazul.com.android_app_project_new_begening;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
@@ -21,6 +23,8 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
     TextView mLessonTitle;
     TextView mLessonDescrip;
     Button mBtnGoVideo1, mBtnGoVideo2, mBtnGoVideo3, mBtnGoVideo4;
+    Uri uri1, uri2, uri3, uri4;
+    SimpleDraweeView caption1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,11 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
 
         ObservableScrollView scrollView = (ObservableScrollView) findViewById(R.id.activity_lesson_content);
         scrollView.setScrollViewCallbacks(this);
+
+        /********+ establecer images del DrawelView de Fresco API ***/
+        caption1 = (SimpleDraweeView) findViewById(R.id.caption1);
+        caption1.setImageURI(uri1);
+        /**********************************************************/
         /** establecer icono en el action bar**/
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.ic_launcher1);
