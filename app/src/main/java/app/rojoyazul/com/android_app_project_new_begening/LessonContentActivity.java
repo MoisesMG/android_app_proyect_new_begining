@@ -56,6 +56,14 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
             }
         });
 
+        mBtnGoVideo2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
+                startActivity(in);
+            }
+        });
+
         //TODO agregar los eventos a los demas botones
         /****************************************/
     }//fin del metodo
