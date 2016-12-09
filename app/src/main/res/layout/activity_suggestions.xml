@@ -63,7 +63,7 @@
                 android:id="@+id/request" />
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -72,19 +72,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="30dp"
+
                     android:layout_marginLeft="12.5dp"
                     android:theme="@style/descriptions"
                     android:id="@+id/textViewYourName"
                     android:layout_weight="1" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:background="@color/colorAccent"
                     android:ems="10"
-                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="30dp"
                     android:layout_marginLeft="12.5dp"
                     android:layout_marginRight="12.5dp"
@@ -94,7 +95,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -103,7 +104,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="30dp"
                     android:layout_marginLeft="12.5dp"
                     android:layout_gravity="center_vertical"
                     android:theme="@style/descriptions"
@@ -111,11 +111,12 @@
                     android:layout_weight="1" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:ems="10"
-                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="30dp"
                     android:layout_marginLeft="12.5dp"
                     android:layout_marginRight="12.5dp"
@@ -128,9 +129,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <TextView
                     android:text="@string/label_sugerencia"
@@ -138,19 +140,19 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="30dp"
                     android:layout_marginLeft="12.5dp"
                     android:layout_gravity="center_vertical"
                     android:theme="@style/descriptions"
                     android:id="@+id/textViewYourSuggets" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
                     android:inputType="textLongMessage"
                     android:background="@color/colorAccent"
                     android:ems="10"
-                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="30dp"
                     android:layout_marginLeft="12.5dp"
                     android:layout_marginRight="12.5dp"
@@ -196,7 +198,8 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -204,7 +207,11 @@
                     app:srcCompat="@drawable/ic_sentiment_very_satisfied_white_24dp"
                     android:id="@+id/imageViewSentimental"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_weight="1" />
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                     />
 
                 <TextView
                     android:text="@string/label_thanks"
