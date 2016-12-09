@@ -8,4 +8,10 @@
     <string name="realizar_ejercicios">Realizar ejercicios</string>
     <string name="ver_video_tutorial">Ver video tutorial</string>
     <string name="videoDescription">Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</string>
+    <string name="title_suggest_activity">Sugerencias</string>
+    <string name="message_request_suggest">Tu opinión es lo mas importante para nosotros. Porfavor si tiene alguna idea genial y alocada para añadir a la aplicacion haznosla saber. Ayuanos a que te sientes comodo y tu aprendizaje sea altamente productivo</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_email">Correo electronico</string>
+    <string name="label_sugerencia">Sugernecia</string>
+    <string name="label_thanks">Gracias por compartir tu ayuda con nostros. Del parte del quipo Rojo y Azul</string>
 </resources>
