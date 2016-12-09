@@ -3,10 +3,12 @@ package app.rojoyazul.com.android_app_project_new_begening;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.firebase.client.Firebase;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
@@ -14,7 +16,7 @@ import com.github.ksoichiro.android.observablescrollview.ScrollState;
 public class SuggestionsActivity extends AppCompatActivity implements ObservableScrollViewCallbacks{
     EditText mName, mEmail, mSuggestion;
     ImageButton mBtnSend, mBtnClear;
-
+    Firebase rootRef = new Firebase("https://androidappprojectnewbegening.firebaseio.com/");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,15 @@ public class SuggestionsActivity extends AppCompatActivity implements Observable
         mBtnSend = (ImageButton) findViewById(R.id.imageButtonSend);
         mBtnClear = (ImageButton) findViewById(R.id.imageButtonClear);
         /*************************/
+
+        /********** eventos onClick Listener *************/
+        mBtnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Firebase suggestRef = rootRef.child("suggestions");
+            }//fin del metodo
+        });
+        /***************************************************/
     }//fin del metodo
 
     @Override
