@@ -22,7 +22,7 @@ public class LessonVideoActivity extends AppCompatActivity {
     }//fin del metodo
 
     public void PlayVideoTutorail(){
-        urlVideo = "https://firebasestorage.googleapis.com/v0/b/androidappprojectnewbegening.appspot.com/o/Tutoriales%20de%20lecciones%20proximamente.mp4?alt=media&token=a8c4dd4d-b6ab-4dad-8fc7-2dc7d67842c4";
+        urlVideo = "http://techslides.com/demos/sample-videos/small.mp4";
         Uri uri = Uri.parse(urlVideo);
         tutorial.setVideoURI(uri);
         tutorial.setMediaController(mediaC);
