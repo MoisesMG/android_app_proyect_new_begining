@@ -56,6 +56,7 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
             }
         });
 
+        //TODO agregar los eventos a los demas botones
         /****************************************/
     }//fin del metodo
 
