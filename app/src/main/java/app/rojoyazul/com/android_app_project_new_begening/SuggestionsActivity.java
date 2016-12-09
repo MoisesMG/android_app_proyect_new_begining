@@ -7,11 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SuggestionsActivity extends AppCompatActivity implements ObservableScrollViewCallbacks{
     EditText mName, mEmail, mSuggestion;
@@ -46,11 +50,15 @@ public class SuggestionsActivity extends AppCompatActivity implements Observable
             @Override
             public void onClick(View v) {
                 Firebase suggestRef = rootRef.child("suggestions");
-                Suggestion yourSuggest = new Suggestion();
-                yourSuggest.setName(String.valueOf(mName.getText()));
-                yourSuggest.setEmail(String.valueOf(mEmail.getText()));
-                yourSuggest.setSuggest(String.valueOf(mSuggestion.getText()));
-                suggestRef.push().setValue(yourSuggest);
+                Firebase newSuggest = suggestRef.push();
+                Map<String, String> yourSuggestion = new HashMap<String, String>();
+                yourSuggestion.put("name", String.valueOf(mName.getText()));
+                yourSuggestion.put("email", String.valueOf(mEmail.getText()));
+                yourSuggestion.put("suggest", String.valueOf(mSuggestion.getText()));
+                newSuggest.setValue(yourSuggestion);
+
+                String tem = String.valueOf(mName.getText()) + " + " + String.valueOf(mEmail.getText()) + " + " + String.valueOf(mSuggestion.getText());
+                Toast.makeText(getApplicationContext(), tem, Toast.LENGTH_SHORT).show();
             }//fin del metodo
         });
 
@@ -58,8 +66,12 @@ public class SuggestionsActivity extends AppCompatActivity implements Observable
             @Override
             public void onClick(View v) {
                 mName.setText("");
+                mName.invalidate();
                 mEmail.setText("");
-                mEmail.setText("");
+                mEmail.invalidate();
+                mSuggestion.setText("");
+                mSuggestion.invalidate();
+                Toast.makeText(getApplicationContext(), "se presiono el boton de reset", Toast.LENGTH_SHORT).show();
             }//fin del metodo
         });
         /***************************************************/
