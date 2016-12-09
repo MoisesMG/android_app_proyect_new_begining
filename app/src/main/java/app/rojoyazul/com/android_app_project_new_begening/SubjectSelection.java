@@ -106,7 +106,7 @@ public class SubjectSelection extends AppCompatActivity implements ObservableScr
                 Bundle toSend = new Bundle();
                 toSend.putString("code", array_subjects.get(0).getCode());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -117,7 +117,7 @@ public class SubjectSelection extends AppCompatActivity implements ObservableScr
                 Bundle toSend = new Bundle();
                 toSend.putString("code", array_subjects.get(1).getCode());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -128,7 +128,7 @@ public class SubjectSelection extends AppCompatActivity implements ObservableScr
                 Bundle toSend = new Bundle();
                 toSend.putString("code", array_subjects.get(2).getCode());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -139,7 +139,7 @@ public class SubjectSelection extends AppCompatActivity implements ObservableScr
                 Bundle toSend = new Bundle();
                 toSend.putString("code", array_subjects.get(3).getCode());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
         /**************************************************/
