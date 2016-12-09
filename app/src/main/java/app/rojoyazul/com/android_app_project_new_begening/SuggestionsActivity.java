@@ -23,6 +23,8 @@ public class SuggestionsActivity extends AppCompatActivity implements Observable
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_white_24dp);
         /**************************************/
+
+        //TODO agregar insercion de firebase
     }//fin del metodo
 
     @Override
