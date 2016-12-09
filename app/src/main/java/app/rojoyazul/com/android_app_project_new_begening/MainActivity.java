@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
         });
 
         /****************++ navegacion entre actividades *******************/
+        //TODO cambiar starActivityForResult a starActivity()
         mBtnLevel1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
                 Bundle sendIt = new Bundle();
                 sendIt.putString("code",array_levels.get(0).getCode());
                 i.putExtras(sendIt);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
                 Bundle sendIt = new Bundle();
                 sendIt.putString("code",array_levels.get(1).getCode());
                 i.putExtras(sendIt);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
                 Bundle sendIt = new Bundle();
                 sendIt.putString("code",array_levels.get(2).getCode());
                 i.putExtras(sendIt);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
                 Bundle sendIt = new Bundle();
                 sendIt.putString("code",array_levels.get(3).getCode());
                 i.putExtras(sendIt);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
         /***********************************************/

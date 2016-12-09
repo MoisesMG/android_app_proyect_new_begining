@@ -39,6 +39,9 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
         mLessonTitle = (TextView) findViewById(R.id.textViewLessonTitle);
         mLessonDescrip = (TextView) findViewById(R.id.textViewLessonDescrip);
         mBtnGoVideo1 = (Button) findViewById(R.id.goVideo1);
+        mBtnGoVideo2 = (Button) findViewById(R.id.goVideo2);
+        mBtnGoVideo3 = (Button) findViewById(R.id.goVideo3);
+        mBtnGoVideo4 = (Button) findViewById(R.id.goVideo4);
         /*************************************/
 
         /*****+++ recuperar datos enviados de LessonSelectionActivity.java ***/
@@ -56,7 +59,32 @@ public class LessonContentActivity extends AppCompatActivity implements Observab
             }
         });
 
-        //TODO agregar los eventos a los demas botones
+
+        mBtnGoVideo2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
+                startActivity(in);
+            }
+        });
+
+        mBtnGoVideo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
+                startActivity(in);
+            }
+        });
+
+        mBtnGoVideo4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(LessonContentActivity.this, LessonVideoActivity.class);
+                startActivity(in);
+            }
+        });
+
+
         /****************************************/
     }//fin del metodo
 
