@@ -112,7 +112,7 @@ public class LessonSelectionActivity extends AppCompatActivity implements Observ
                 toSend.putString("title", array_lessons.get(0).getTitle());
                 toSend.putString("cont", array_lessons.get(0).getContent());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -124,7 +124,7 @@ public class LessonSelectionActivity extends AppCompatActivity implements Observ
                 toSend.putString("title", array_lessons.get(1).getTitle());
                 toSend.putString("cont", array_lessons.get(1).getContent());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -136,7 +136,7 @@ public class LessonSelectionActivity extends AppCompatActivity implements Observ
                 toSend.putString("title", array_lessons.get(2).getTitle());
                 toSend.putString("cont", array_lessons.get(2).getContent());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
 
@@ -148,7 +148,7 @@ public class LessonSelectionActivity extends AppCompatActivity implements Observ
                 toSend.putString("title", array_lessons.get(3).getTitle());
                 toSend.putString("cont", array_lessons.get(3).getContent());
                 i.putExtras(toSend);
-                startActivityForResult(i, 1);
+                startActivity(i);
             }
         });
         /********************************************/
